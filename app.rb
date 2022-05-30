@@ -13,7 +13,13 @@ get "/magpies" do
   "magpies!"
 end
 
-get "/cat" do
+get "/random_cat" do
   @cat_name = ["Almond", "Misty", "Amigo"].sample()
+  erb(:index)
+end
+
+get "/named_cat" do
+  p params
+  @cat_name = params[:name]
   erb(:index)
 end
