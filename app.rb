@@ -18,8 +18,12 @@ get "/random_cat" do
   erb(:index)
 end
 
-get "/named_cat" do
+post "/named_cat" do
   p params
   @cat_name = params[:name]
+  erb(:reveal_cat)
+end
+
+get "/name_cat" do
   erb(:index)
 end
