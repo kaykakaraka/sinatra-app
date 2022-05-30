@@ -14,7 +14,6 @@ get "/magpies" do
 end
 
 get "/cat" do
-  "<div style='border: dashed red'>
-  <img src='https://i.imgur.com/jFaSxym.png'>
-  </div>"
+  @cat_name = ["Almond", "Misty", "Amigo"].sample()
+  erb(:index)
 end
